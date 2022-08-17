@@ -11,22 +11,10 @@
 //  I. Akushevich, Eur. Phys. J. C 8, 457–463 (1999)
 
 #include "Deep_pipi.hpp"
-#include <stdio.h>
-#include <TCanvas.h>
-#include <TH2D.h>
-#include <TRandom3.h>
-#include <TVector3.h>
-#include <TLorentzVector.h>
-#include <TH1D.h>
-#include <TH2D.h>
-#include <TLatex.h>
-#include <TLegend.h>
-#include <TF1.h>
 
-//void montecarlo_new(){
-int Deep_pipi(){
+int main(){
     FILE *outfile;
-    outfile = fopen("deepR.dat", "w");  // using relative path name of file
+    outfile = fopen("deep-pipi-gen.dat", "w");  // using relative path name of file
     if (outfile == NULL) {
         printf("Unable to open file.");
     }
@@ -70,7 +58,7 @@ int Deep_pipi(){
     // TH1D *hDPy = new TH1D("hDPy", "Final State P_{y} - Initial State P_{y}; #Delta P_{y}   ;  Events  ",
     // 95, -9.5,9.5);
     TH1D *h_RF = new TH1D("h_RF", "RF  ;  Events  ",95, 0.0,4.0);
-    TH1D *h_sigmaobs = new TH1D("h_RF", "RF  ;  Events  ",95, 0.0,4.0);
+    TH1D *h_sigmaobs = new TH1D("h_sigmaobs", "RF  ;  Events  ",95, 0.0,4.0);
     const int n_rad_bin=200;
     TH1D *h_rad = new TH1D("h_rad",
                            "(pre_rad+post_rad)/v_{max}; (GeV)^{2}  ;  Events  ",
@@ -162,7 +150,7 @@ int Deep_pipi(){
         
         tmax = 2.*M2 - 2.*EpCM*EpprimeCM - 2.*PCM*P12CM; // Max NEGATIVE
         tmin = 2.*M2 - 2.*EpCM*EpprimeCM + 2.*PCM*P12CM; // Min NEGATIVE
-        tmaxGen = max(tmax,tMaxGen0);
+        tmaxGen = std::max(tmax,tMaxGen0);
         t    = (tmaxGen-tmin)*ran3.Uniform()*tFrac + tmin;
         ht->Fill(t);
         //  For any t, there is a range of radiation values v_cut allowed between 0 and v_{Max}

@@ -9,6 +9,18 @@
 #define Monte_RC_hpp
 
 #include <stdio.h>
+#include <TCanvas.h>
+#include <TH2D.h>
+#include <TRandom3.h>
+#include <TVector3.h>
+#include <TLorentzVector.h>
+#include <TH1D.h>
+#include <TH2D.h>
+#include <TLatex.h>
+#include <TLegend.h>
+#include <TF1.h>
+
+#include <stdio.h>
 const Double_t alphaQED = 1.0/137.03;
 const Double_t mElectron= 0.511e-3;
 const Double_t mElSq    = mElectron*mElectron;
