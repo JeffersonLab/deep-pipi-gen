@@ -12,7 +12,34 @@
 
 #include "Deep_pipi.hpp"
 
-int main(){
+int main(int argc, char *argv[]) {
+  
+    // choose a random number seed from system clock:
+    //auto time = std::chrono::system_clock::now();
+    //std::chrono::microseconds ms =
+    //    std::chrono::duration_cast<std::chrono::microseconds>(time.time_since_epoch()); 
+    //long long unsigned seed_value = ms.count(); 
+
+    char* short_options = (char*)"a:b:c:";
+    const struct option long_options[] = {
+                {"trig",required_argument,NULL,'a'},
+                {"docker",optional_argument,NULL,'b'},
+                {"seed",optional_argument,NULL,'c'}
+    };
+
+    int nevents,seed;
+    for (int i=1; i<argc; i+=2) {
+        TString key = argv[i];
+        TString val = argv[i+1];
+        if (key.EqualTo("--trig")) {
+            nevents = val.Atoi();
+        }
+        else if (key.EqualTo("--seed")) {
+            seed = val.Atoi();
+            gRandom->SetSeed(seed);
+        }
+    }
+
     FILE *outfile;
     outfile = fopen("deep-pipi-gen.dat", "w");  // using relative path name of file
     if (outfile == NULL) {
@@ -104,7 +131,7 @@ int main(){
     k4BeamLab.SetVectM(kBeam3,mLepton);
     
     Int_t nEvt=0;
-    for(Int_t i=0;i<10000;i++){
+    while (nEvt<nevents) {
         Q2=(Q2max-Q2min)*(ran3.Uniform())+Q2min;
         xBj=(xmax-xmin)*(ran3.Uniform())+xmin;
         nu=Q2/(2*xBj*Mtarget);
@@ -143,7 +170,7 @@ int main(){
         EpprimeCM=(W2+M2-M122)/(2.*sqrt(W2));
         if (E12CM*E12CM < M122) {
             printf("Event %d, E12CM, M122 = %7.3f, %7.3f \n",
-                   i, E12CM, M122);
+                   nEvt, E12CM, M122);
             continue;
         }
         P12CM=sqrt(E12CM*E12CM-M122);
@@ -180,7 +207,7 @@ int main(){
         vmaxH=((Q2-t+M122)/(2*xBj)+t) * (1-sqrt(1-W2*(tmax-t)*(t-tmin)/Q2/pow((Q2-t+M122)/(2*xBj)+t,2))); //Dr.Hyde's definition of vmax
         vmaxE= pow(sqrt(W2)-sqrt(M122),2)-Mtarget*Mtarget; //exclurad definition
         if((vmaxD-vmaxH)>1.e-6||(vmaxD-vmaxH)<-1.e-6) {
-            printf("Event %d, vmax D,H = %9.6f, %9.6f  GeV2 \n ", i, vmaxD, vmaxH);
+            printf("Event %d, vmax D,H = %9.6f, %9.6f  GeV2 \n ", nEvt, vmaxD, vmaxH);
             continue;
         }
             vmax= vmaxD;
@@ -259,7 +286,7 @@ int main(){
         Xprime= XX+Q2-VV2;                                              //Diffrad 9
         if (Sprime<= 0.0 || Xprime<= 0.0){
             printf("Event %d, Sprime, Xprime %7.4f, %7.4f Negative invalid \n",
-                   i, Sprime,Xprime);
+                   nEvt, Sprime,Xprime);
             printf("     SS, XX, VV1, VV2 = %7.3f, %7.3f, %7.3f, %7.3f \n",
                    SS, XX, VV1, VV2);
             printf("     CM E1, p1, E2, p2, Eh, ph = %7.3f, %7.3f, %7.3f, %7.3f %7.3f %7.3f \n",
@@ -285,7 +312,7 @@ int main(){
         Eh = (W2-mu*mu-pre_rad-post_rad+M122)/(2.*sqrt(W2));
         if (Eh<sqrt(M122)){
             printf("Event %d, Invalid radiative kinematics E12CM, M_pi,pi = %7.4f, %7.4f \n",
-                   i, Eh,sqrt(M122));
+                   nEvt, Eh,sqrt(M122));
             continue;
         }
         ph = sqrt(Eh*Eh-M122);
@@ -293,7 +320,7 @@ int main(){
         csthe12 = (Q2+t + 2.*Eq*Eh - M122)/(2.*sqrt(Eq*Eq+Q2)*ph);
         if (csthe12*csthe12>1.0){
             printf("Event %d, csthe12=%10.3f gamma* P CM frame\n",
-                   i,csthe12);
+                   nEvt,csthe12);
             printf("     tMin, t = %7.4f, %7.4f \n", tmin, t);
             continue;}
         thetP12CM = acos(csthe12);
@@ -426,7 +453,7 @@ int main(){
         
         if(k4PreRad.E()<0.0 || k4PostRad.E()<0.0){
             printf("Event %d, negative energy photon PreE, PostE = %7.4f, %7.4f \n",
-                   i, k4PreRad.E(),k4PostRad.E());
+                   nEvt, k4PreRad.E(),k4PostRad.E());
             continue;
         }
         

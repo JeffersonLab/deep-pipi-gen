@@ -8,7 +8,10 @@
 #ifndef Monte_RC_hpp
 #define Monte_RC_hpp
 
+#include <getopt.h>
 #include <stdio.h>
+#include <chrono>
+
 #include <TCanvas.h>
 #include <TH2D.h>
 #include <TRandom3.h>
