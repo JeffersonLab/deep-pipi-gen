@@ -113,7 +113,7 @@ int main(int argc, char *argv[]) {
     int parent=0, daughter=0;
     kprime=y;
     theta=x;
-    TRandom3 ran3;
+    TRandom3 ran3(0);
     TVector3 unitzq, unitxq, unityq, unitz12, unitx12, unity12,unitx,unity,unitz,unitpi0x,unitpi0y,unitpi0z;
     TVector3 kBeam3, kScat3, qVector3, BoostLab, BoostRest, pi0Boost;
     TVector3 p3Pion1,PVec12CM,p3pi0,p3gammaN;
