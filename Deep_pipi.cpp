@@ -557,7 +557,7 @@ int main(int argc, char *argv[]) {
     TLatex tl;
     tl.SetTextAlign(22);
     tl.DrawLatex(0.5,h_rad->GetSum()/10.,"#frac{Sum}{Bins}#delta x^{-1+#delta}");
-    return nEvt;
+    return EXIT_SUCCESS;
     
     
 }
