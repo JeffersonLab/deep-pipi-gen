@@ -54,7 +54,8 @@ Moreover, Raditive Correction has added to this generator.
  
  4 Then Run as follows
     ./deep-pipi-gen --trig 10000 
-         Seeds are optional
+    
+      Seeds are optional
  
  
  
