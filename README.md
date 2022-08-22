@@ -12,15 +12,17 @@
    - Generate $x_{B}=[x_{min},x_{max}]$. For $k=10.6 GeV$, an appropriate range is
     $x_{min}=0.2$,  $x_{max}=0.8$
     
-   - Generate $Q^{2}=[Q^{2}_{min}, Q^{2}_{max}]$. Use $Q_{min}=1GeV^2$. Energy-momentum conservations requires (Laboratory rest frame)
+   - Generate $Q^{2}=[Q^{2}_{min},Q^{2}_{max}]$. Use $Q_{min}^{2}=1GeV^2$. Energy-momentum conservations requires (Laboratory rest frame)
    
      $k^{\prime} = \frac{k}{1+ \frac{k}{Mx_B}\left(1-\cos\theta_e\right)}$
     
      $Q^2 = \frac{2k^2(1-\cos\theta_e)}{1 + \frac{k}{Mx_B}\left(1-\cos\theta_e\right)}$
    
     Therefore:
+    
    
     $Q^{2}_{max} = 4k^{2}\left/\left[1 + \frac{2k}{Mx_B}\right] \right.  = \frac{4k^2 Mx_B }{M x_B + 2k}$
+    
  
  Note that $Q^{2}_{max}$ is a function of $x_{B}$. Check that $k'$ is physical: reject events with $k'<0$ or $k'>k$. Calculate the invariant $W^{2}=M^{2}+Q^{2}(\frac{1}{x_{B}}-1)$: reject events with $W^{2}-M^{2}< 4m\pi^{2}$. Use the charged pion mass $m_{\pi}=0.139 GeV$ and neutral pion mass $m_{\pi}=0.135 GeV$
     
