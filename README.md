@@ -41,4 +41,16 @@ Compute the $\sigma\text{-Rest}$ frame four-vectors $p_1$ and $p_2$ of the two p
 Moreover, Raditive Correction has added to this generator.
 
 **RUN THE GENEARATOR**
+   *Local Machine
+ Pre-requisites -ROOT Cern
+ 
+ 1.Install ROOT CERN
+ 2.gitclone of the event generator
+ 3.Run "make". this create the "deep-pipi-gen"
+ 4.Then Run as follows
+  ./deep-pipi-gen --trig 10000 
+  Seeds are optional
+ 
+ 
+ 
 
