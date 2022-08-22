@@ -22,19 +22,19 @@
     
      Note: $Q^2_{max}$ is a function of $x_{B}$. Checked that $k'$ is physical: reject events with $k'<0$ or $k'>k$.           Calculated the invariant $W^{2}=M^{2}+Q^{2}(\frac{1}{x_{B}}-1)$: reject events with $W^{2}-M^{2}< 4m\pi^{2}$. Use the   charged pion mass $m_{\pi}=0.139 GeV$
  
-    - Generate $\phi_{e} \in [0,2\pi]$. 
+   - Generate $\phi_{e} \in [0,2\pi]$. 
      
-    - Generate the $\pi\pi$ invariant mass squared
+   - Generate the $\pi\pi$ invariant mass squared
     
     $M_{1,2}^{2} \in [4m_{\pi}^{2}, (\sqrt[]{W^{2}}-M)^{2}]$
     
-    - Generate  $t \in [t_{max},t_{min}]$. Calculate $cos\theta^{*}_{1,2}$. Check that $-1 < cos(\theta^{*}_{1,2}) <1$.
+   - Generate  $t \in [t_{max},t_{min}]$. Calculate $cos\theta^{*}_{1,2}$. Check that $-1 < cos(\theta^{*}_{1,2}) <1$.
  
-    - Generate $\phi_{1,2}^\ast \in[0,2\pi]$.\\
+   - Generate $\phi_{1,2}^\ast \in[0,2\pi]$.\\
 
-    - Generate $\cos\theta_{\sigma-\text{Rest}} \in [-1,1]$.
+   - Generate $\cos\theta_{\sigma-\text{Rest}} \in [-1,1]$.
 
-    - Generate $\phi_{\sigma-\text{Rest}} \in [0,2\pi]$.\\
+   - Generate $\phi_{\sigma-\text{Rest}} \in [0,2\pi]$.\\
 Compute the $\sigma\text{-Rest}$ frame four-vectors $p_1$ and $p_2$ of the two pions.
 
     
