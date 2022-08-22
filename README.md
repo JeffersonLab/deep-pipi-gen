@@ -18,7 +18,6 @@
     
      $Q^2 = \frac{2k^2(1-\cos\theta_e)}{1 + \frac{k}{Mx_B}\left(1-\cos\theta_e\right)}$
    
-    Therefore:
     
    
     $Q^{2}_{max} = 4k^{2}\left/\left[1 + \frac{2k}{Mx_B}\right] \right.  = \frac{4k^2 Mx_B }{M x_B + 2k}$
