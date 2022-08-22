@@ -49,12 +49,13 @@ Moreover, Raditive Correction has added to this generator.
  2 gitclone of the event generator
   https://github.com/JeffersonLab/deep-pipi-gen.git
  
- 3 Run "make". this creates the "deep-pipi-gen" file(executable file)
+ 3 Run "make". 
+  this creates the "deep-pipi-gen" file(executable file)
  
  4 Then Run as follows
- 
-  ./deep-pipi-gen --trig 10000 
-  Seeds are optional
+    ./deep-pipi-gen --trig 10000 
+    
+      Seeds are optional
  
  
  
