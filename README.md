@@ -53,6 +53,7 @@ Moreover, Raditive Correction has added to this generator.
    this creates the "deep-pipi-gen" file(executable file)
  
  4 Then Run as follows(Seeds are optional)
+  
     ./deep-pipi-gen --trig 10000 
     
      
