@@ -21,9 +21,11 @@
      $Q^2_\text{max} = 4k^2\left/\left[1 + \frac{2k}{Mx_B}\right] \right.  = \frac{4k^2 Mx_B }{M x_B + 2k}$
     
  
- Note: $Q^2_{max}$ is a function of $x_{B}$. Checked that $k'$ is physical: reject events with $k'<0$ or $k'>k$. Calculated the invariant $W^{2}=M^{2}+Q^{2}(\frac{1}{x_{B}}-1)$: reject events with $W^{2}-M^{2}< 4m\pi^{2}$. Use the charged pion mass $m_{\pi}=0.139 GeV$.
+ Note: $Q^2_{max}$ is a function of $x_{B}$. Checked that $k'$ is physical: reject events with $k'<0$ or $k'>k$. Calculated the invariant $W^{2}=M^{2}+Q^{2}(\frac{1}{x_{B}}-1)$: reject events with $W^{2}-M^{2}< 4m\pi^{2}$. Use the charged pion mass $m_{\pi}=0.139 GeV$
+ 
     
     - Generate $\phi_{e} \in [0,2\pi]$. 
+    
     
     - Generate the $\pi\pi$ invariant mass squared
     
