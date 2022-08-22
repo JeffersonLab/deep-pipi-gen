@@ -38,4 +38,7 @@
 Compute the $\sigma\text{-Rest}$ frame four-vectors $p_1$ and $p_2$ of the two pions.
 
     
+Moreover, Raditive Correction has added to this generator.
+
+**RUN THE GENEARATOR**
 
