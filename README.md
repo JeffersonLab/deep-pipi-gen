@@ -12,10 +12,10 @@
    - Generate $x_{B}=[x_{min},x_{max}]$. For $k=10.6 GeV$, an appropriate range is
     $x_{min}=0.2$  $x_{max}=0.8$
     
-   - Generate $Q^{2}$ in $[Q^{2}_{min}, Q^{2}_{max}]$. Use $Q^{min}=1GeV^2$. Energy-momentum conservations requires (Laboratory rest frame)
+   - Generate $Q^{2}$ in $[Q^{2}_{min}, Q^{2}_{max}]$. Use $Q_{min}=1GeV^2$. Energy-momentum conservations requires (Laboratory rest frame)
 
     $$k^{\prime} = \frac{k}{1+ \frac{k}{Mx_B}(1-\cos\theta_e\right)}$$
-  
+ $k^{\prime} = \frac{k}{1+ \frac{k}{Mx_B}\left(1-\cos\theta_e\right)}$
     \begin{equation}\label{heitler1}
     Q^2 = \frac{2k^2(1-\cos\theta_e)}{1 + \frac{k}{Mx_B}\left(1-\cos\theta_e\right)}.
     \end{equation}
