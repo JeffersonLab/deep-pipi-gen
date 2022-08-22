@@ -7,13 +7,12 @@ DEEP VIRTUAL TWO PION PAIR PRODUCTION
  Those are $Q^{2}$, $x_{B}$, $\phi_{e}$, $M_{1,2}^{2}$, $t$, $\phi_{1,2}^{*}$, $cos(\theta)_{\sigma_{rest}}$, $\phi_{\sigma_{rest}}$.
  This event generator has proceeded as follows.(with fixed incident beam energy $k=10.6 GeV$
  
- \begin{enumerate}
-    \item 
-    Generate $x_{B}=[x_{min},x_{max}]$. For $k=10.6 GeV$, an appropriate range is \\
-    $x_{min}=0.2$  \hspace{1cm} $x_{max}=0.6$
+
+   
+   - Generate $x_{B}=[x_{min},x_{max}]$. For $k=10.6 GeV$, an appropriate range is \\
+    $x_{min}=0.2$  \hspace{1cm} $x_{max}=0.8$
     
-    \item 
-    Generate $Q^{2} \in [Q^{2}_{min},Q^{2}_{max}]$. Use $Q^{min}=1GeV^2$. Energy-momentum conservations requires (Laboratory rest frame):\\
+   - Generate $Q^{2} \in [Q^{2}_{min},Q^{2}_{max}]$. Use $Q^{min}=1GeV^2$. Energy-momentum conservations requires (Laboratory rest frame):\\
     \begin{equation}\label{heitler1}
     k' = \frac{k}{1+ \frac{k}{Mx_B}\left(1-\cos\theta_e\right)} \qquad \qquad
     \end{equation}
@@ -60,4 +59,4 @@ Boost the four-vectors $p_1$, $p_2$ back to the  $\gamma^\ast P\,\text{CM}$ fram
 \item
 Boost the four-vectors $p_1$,  $p_2$, $P'$ back to the laboratory frame.
     
-\end{enumerate}
+
