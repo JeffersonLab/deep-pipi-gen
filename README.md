@@ -28,7 +28,7 @@
     
     $M_{1,2}^{2} \in [4m_{\pi}^{2}, (\sqrt[]{W^{2}}-M)^{2}]$
     
-    - Generate $t \in [t_{max},t_{min}]$. Calculate $cos\theta^{*}_{1,2}$. Check that $-1 < cos(\theta^{*}_{1,2}) <1$.
+    - Generate  $t \in [t_{max},t_{min}]$. Calculate $cos\theta^{*}_{1,2}$. Check that $-1 < cos(\theta^{*}_{1,2}) <1$.
  
     - Generate $\phi_{1,2}^\ast \in[0,2\pi]$.\\
 
