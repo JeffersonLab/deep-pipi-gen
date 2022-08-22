@@ -14,7 +14,7 @@
     
    - Generate $Q^{2}$ in $[Q^{2}_{min},Q^{2}_{max}]$. Use $Q^{min}=1GeV^2$. Energy-momentum conservations requires (Laboratory rest frame)
 
-    $$k' = \frac{k}{1+ \frac{k}{Mx_B}\left(1-\cos\theta_e\right)} \qquad \qquad$$
+    $$k' = \frac{k}{1+ \frac{k}{Mx_B}\left(1-\cos\theta_e\right)}$$
   
     \begin{equation}\label{heitler1}
     Q^2 = \frac{2k^2(1-\cos\theta_e)}{1 + \frac{k}{Mx_B}\left(1-\cos\theta_e\right)}.
