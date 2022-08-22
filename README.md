@@ -44,10 +44,15 @@ Moreover, Raditive Correction has added to this generator.
    *Local Machine
  Pre-requisites -ROOT Cern
  
- 1.Install ROOT CERN
- 2.gitclone of the event generator
- 3.Run "make". this create the "deep-pipi-gen"
- 4.Then Run as follows
+ 1 Install ROOT CERN
+ 
+ 2 gitclone of the event generator
+  https://github.com/JeffersonLab/deep-pipi-gen.git
+ 
+ 3 Run "make". this creates the "deep-pipi-gen" file(executable file)
+ 
+ 4 Then Run as follows
+ 
   ./deep-pipi-gen --trig 10000 
   Seeds are optional
  
